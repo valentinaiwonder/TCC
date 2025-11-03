@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f9ff;
+}
+
+h1 {
+    color: #005b99;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#cell-area {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.cell-image {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #0077cc;
+}
+
+.drop-zone {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px dashed transparent;
+    border-radius: 50%;
+}
+
+.drop-zone.hover {
+    border-color: #009933;
+}
+
+#organelles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.draggable {
+    background-color: #d9f0ff;
+    border: 1px solid #0077cc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: grab;
+    font-weight: bold;
+    width: 120px;
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+#feedback {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}

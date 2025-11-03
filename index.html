@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monte a Célula Animal!</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Monte a Célula Animal</h1>
+    <p>Arraste cada organela para o local correto na célula.</p>
+
+    <div id="game-container">
+        <div id="cell-area">
+            <img src="citoplasmavazio.png" alt="Célula Animal" class="cell-image" />
+            <div class="drop-zone" data-org="nucleo" style="top:40%; left:50%;"></div>
+            <div class="drop-zone" data-org="retículo endoplasmatico" style="top:45%; left:45%;"></div>
+            <div class="drop-zone" data-org="mitocondria" style="top:60%; left:30%;"></div>
+            <div class="drop-zone" data-org="ribossomo" style="top:30%; left:60%;"></div>
+            <div class="drop-zone" data-org="lisossomo" style="top:65%; left:55%;"></div>
+
+        </div>
+
+        <div id="organelles">
+            <div class="draggable" draggable="true" data-org="nucleo">Núcleo</div>
+            <div class="draggable" draggable="true" data-org="mitocondria">Mitocôndria</div>
+            <div class="draggable" draggable="true" data-org="ribossomo">Ribossomo</div>
+            <div class="draggable" draggable="true" data-org="lisossomo">Lisossomo</div>
+        </div>
+    </div>
+
+    <div id="feedback"></div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
