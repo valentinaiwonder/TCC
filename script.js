@@ -1,16 +1,15 @@
 const draggables = document.querySelectorAll('.draggable');
 const dropZones = document.querySelectorAll('.drop-zone');
 const feedback = document.getElementById('feedback');
-
 let dragged = null;
 
-draggables.forEach(item => {
-    item.addEventListener('dragstart', e => {
+draggables.forEach(img => {
+    img.addEventListener('dragstart', e => {
         dragged = e.target;
-        e.target.style.opacity = '0.5';
+        e.target.style.opacity = '0.6';
     });
 
-    item.addEventListener('dragend', e => {
+    img.addEventListener('dragend', e => {
         e.target.style.opacity = '1';
     });
 });
@@ -34,7 +33,7 @@ dropZones.forEach(zone => {
             dragged.style.position = 'absolute';
             dragged.style.top = '0';
             dragged.style.left = '0';
-            feedback.textContent = '✔️ Correto!';
+            feedback.textContent = '✔️ Certo!';
             feedback.style.color = 'green';
         } else {
             feedback.textContent = '❌ Errado! Tente novamente.';
