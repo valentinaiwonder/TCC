@@ -29,15 +29,13 @@ dropZones.forEach(zone => {
         zone.classList.remove('hover');
 
         if (dragged.dataset.org === zone.dataset.org) {
-            zone.appendChild(dragged);
+            document.getElementById('cell-area').appendChild(dragged);
             dragged.style.position = 'absolute';
-            dragged.style.top = '0';
-            dragged.style.left = '0';
+            dragged.style.top = zone.style.top;
+            dragged.style.left = zone.style.left;
             feedback.textContent = '✔️ Certo!';
             feedback.style.color = 'green';
-        } else {
-            feedback.textContent = '❌ Errado! Tente novamente.';
-            feedback.style.color = 'red';
         }
+
     });
 });
