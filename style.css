@@ -1,83 +1,103 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #eefaff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #eefaff;
 }
 
 h1 {
-    color: #005b99;
+  color: #005b99;
 }
 
 #game-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 20px;
-    width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+  width: 1200px;
 }
 
 #cell-area {
-    position: relative;
-    width: 500px;
-    height: 650px;
-    flex-shrink: 0;
-    overflow: hidden;
-}
-
-#cell-area .draggable {
-    position: absolute;
-    width: 80px;
-    z-index: 5;
+  position: relative;
+  width: 500px;
+  height: 650px;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .cell-image {
-    width: 100%;
+  width: 100%;
 }
 
+/* zonas de destino */
 .drop-zone {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border: 2px dashed transparent;
-    border-radius: 50%;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px dashed transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.drop-zone.hover {
-    border-color: #00a33d;
+.drop-zone:hover {
+  border-color: #00a33d;
 }
 
+/* estilo da dica */
+.hint {
+  background: rgba(255, 255, 255, 0.8);
+  color: #005b99;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 8px;
+  max-width: 70px;
+  transition: opacity 0.3s ease;
+}
+
+/* desaparece ao acertar */
+.drop-zone.correct .hint {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* área das organelas */
 #organelles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    background-color: #2bc7e0;
-    padding: 10px;
-    border-radius: 10px;
-    width:400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  background-color: #2bc7e0;
+  padding: 10px;
+  border-radius: 10px;
+  width: 400px;
 }
 
 .draggable {
-    width: 110px;
-    cursor: grab;
-    background: none;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    transition: transform 0.2s;
-    user-select: none;
-    -webkit-user-drag: element;
-    position: relative;
+  width: 110px;
+  cursor: grab;
+  background: none;
+  border: none;
+  padding: 0;
+  user-select: none;
+  -webkit-user-drag: element;
+  transition: transform 0.2s;
 }
 
 .draggable:active {
-    cursor: grabbing;
-    transform: scale(1.05);
+  cursor: grabbing;
+  transform: scale(1.05);
 }
-
+.draggable[data-org="nucleo"] {
+    width: 130px;
+    /* aumenta só o núcleo */
+}
 #feedback {
-    margin-top: 25px;
-    font-size: 18px;
-    font-weight: bold;
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
 }

@@ -16,32 +16,64 @@
         <div id="cell-area">
             <img src="citoplasmavazio.png" alt="Célula Animal" class="cell-image" />
 
-            <!-- Áreas de destino -->
-            <div class="drop-zone" data-org="nucleo" style="top:170px; left:200px;"></div>
-            <div class="drop-zone" data-org="mitocondria" style="top:100px; left:30px;"></div>
-            <div class="drop-zone" data-org="mitocondria2" style="top:270px; left:210px;"></div>
-            <div class="drop-zone" data-org="ribossomo" style="top:30%; left:65%;"></div>
-            <div class="drop-zone" data-org="lisossomo" style="top:65%; left:55%;"></div>
-            <div class="drop-zone" data-org="reticulo" style="top:150px; left:160px;"></div>
-            <div class="drop-zone" data-org="reticulo2" style="top:180px; left:240px;"></div>
-            <div class="drop-zone" data-org="complexodegolgi" style="top:65%; left:55%;"></div>
-            <div class="drop-zone" data-org="microtubulo" style="top:65%; left:55%;"></div>
-            <div class="drop-zone" data-org="centriolos" style="top:65%; left:55%;"></div>
-            <div class="drop-zone" data-org="microtubulo2" style="top:65%; left:55%;"></div>
+            <!-- Cada drop-zone com uma dica -->
+            <div class="drop-zone" data-org="nucleo" style="top:170px; left:200px;"> <span class="hint">Centro da célula</span>
+            </div>
+            <div class="drop-zone" data-org="microtubulo" style="top:40px; left:200px;">
+            <span class="hint">Estradas celulares</span>
+            </div>
+            <div class="drop-zone" data-org="microtubulo2" style="top:310px; left:250px;">
+            <span class="hint">Estradas celulares</span>
+            </div>
+            <div class="drop-zone" data-org="microtubulo3" style="top:300px; left:50px;">
+                <span class="hint">Estradas celulares</span>
+            </div>
+            <div class="drop-zone" data-org="mitocondria" style="top:100px; left:40px;">
+                <span class="hint">Produz energia (ATP)</span>
+            </div>
+
+            <div class="drop-zone" data-org="mitocondria2" style="top:320px; left:330px;">
+                <span class="hint">Responsável pela respiração celular</span>
+            </div>
+
+            <div class="drop-zone" data-org="ribossomo" style="top:130px; left:320px;">
+                <span class="hint">Fabrica proteínas</span>
+            </div>
+
+            <div class="drop-zone" data-org="lisossomo" style="top:400px; left:110px;">
+                <span class="hint">Decompõe substâncias</span>
+            </div>
+
+            <div class="drop-zone" data-org="reticulo" style="top:140px; left:140px;">
+                <span class="hint">Transporte de substâncias</span>
+            </div>
+            <div class="drop-zone" data-org="reticulo2" style="top:210px; left:270px;">
+            <span class="hint">Transporte de substâncias</span>
+                        </div>
+
+            <div class="drop-zone" data-org="complexodegolgi" style="top:405px; left:220px;">
+                <span class="hint">Armazena e empacota proteínas</span>
+            </div>
+
+            <div class="drop-zone" data-org="centriolos" style="top:300px; left:120px;">
+                <span class="hint">Ajuda na divisão celular</span>
+            </div>
         </div>
 
         <div id="organelles">
             <img src="nucleo.png" class="draggable" draggable="true" data-org="nucleo" alt="Núcleo">
             <img src="mitocondria.png" class="draggable" draggable="true" data-org="mitocondria" alt="Mitocôndria">
             <img src="mitocondria2.png" class="draggable" draggable="true" data-org="mitocondria2" alt="Mitocôndria">
+            <img src="microtubulo.png" class="draggable" draggable="true" data-org="microtubulo" alt="Microtúbulo">
+            <img src="microtubulo2.png" class="draggable" draggable="true" data-org="microtubulo2" alt="Microtúbulo">
+            <img src="microtubulo3.png" class="draggable" draggable="true" data-org="microtubulo3" alt="Microtúbulo">
             <img src="ribossomo.png" class="draggable" draggable="true" data-org="ribossomo" alt="Ribossomo">
             <img src="lisossomo.png" class="draggable" draggable="true" data-org="lisossomo" alt="Lisossomo">
-            <img src="reticulo.png" class="draggable" draggable="true" data-org="reticulo" alt="reticulo">
-            <img src="complexodegolgi.png" class="draggable" draggable="true" data-org="complexodegolgi" alt="complexodegolgi">
-            <img src="microtubulo.png" class="draggable" draggable="true" data-org="microtubulo" alt="Microtubulo">
-            <img src="centriolos.png" class="draggable" draggable="true" data-org="centriolos" alt="Centriolos">
-            <img src="reticulo2.png" class="draggable" draggable="true" data-org="reticulo2" alt="reticulo">
-            <img src="microtubulo2.png" class="draggable" draggable="true" data-org="microtubulo2" alt="Microtubulo">
+            <img src="reticulo.png" class="draggable" draggable="true" data-org="reticulo" alt="Retículo">
+            <img src="reticulo2.png" class="draggable" draggable="true" data-org="reticulo2" alt="Retículo">
+            <img src="complexodegolgi.png" class="draggable" draggable="true" data-org="complexodegolgi"
+                alt="Complexo de Golgi">
+            <img src="centriolos.png" class="draggable" draggable="true" data-org="centriolos" alt="Centríolos">
         </div>
     </div>
 

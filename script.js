@@ -29,13 +29,21 @@ dropZones.forEach(zone => {
         zone.classList.remove('hover');
 
         if (dragged.dataset.org === zone.dataset.org) {
+            // coloca a organela na célula
             document.getElementById('cell-area').appendChild(dragged);
             dragged.style.position = 'absolute';
             dragged.style.top = zone.style.top;
             dragged.style.left = zone.style.left;
+
+            // some com a dica
+            zone.classList.add('correct');
+
+            // mensagem de acerto
             feedback.textContent = '✔️ Certo!';
             feedback.style.color = 'green';
+        } else {
+            feedback.textContent = '❌ Errado! Tente novamente.';
+            feedback.style.color = 'red';
         }
-
     });
 });
