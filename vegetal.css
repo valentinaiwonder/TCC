@@ -1,0 +1,92 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #dff7ff, #b3e8ff);
+}
+
+header {
+    background: #ffffffaa;
+    backdrop-filter: blur(6px);
+    padding: 25px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #004b80;
+    font-weight: 800;
+}
+
+header p {
+    margin: 6px 0 0;
+    font-size: 18px;
+    color: #006fa8;
+}
+
+#game-container {
+    margin-bottom: 40px;
+    /* abre espaço pro botão */
+}
+
+#cell-area {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.cell-image {
+    width: 100%;
+}
+
+/* Campos de resposta */
+.answer {
+    position: absolute;
+    width: 150px;
+    padding: 6px 8px;
+    border: 2px solid #0077cc;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    background: #ffffffdd;
+    transition: 0.2s;
+}
+
+.answer.correct {
+    border-color: #00a33d;
+    background: #d8ffe5;
+}
+
+.answer.wrong {
+    border-color: #cc0000;
+    background: #ffd3d3;
+}
+
+#check {
+    margin-top: 25px;
+    background: #0077cc;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#check:hover {
+    background: #005b99;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}

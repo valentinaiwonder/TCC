@@ -1,9 +1,37 @@
+/* Fundo suave, moderno e sem roubar a cena */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   text-align: center;
-  background-color: #eefaff;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #dff7ff, #b3e8ff);
 }
 
+/* Cabeçalho com faixa discreta */
+header {
+  background: #ffffffaa;
+  backdrop-filter: blur(6px);
+  padding: 25px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+/* Título – forte, mas sem gritaria */
+h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #004b80;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Subtítulo leve */
+header p {
+  margin: 6px 0 0;
+  font-size: 18px;
+  color: #006fa8;
+  font-weight: 500;
+}
 h1 {
   color: #005b99;
 }
