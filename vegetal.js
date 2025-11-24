@@ -28,11 +28,20 @@ document.getElementById("check").addEventListener("click", () => {
     const total = fields.length;
     const feedback = document.getElementById("feedback");
 
+    const popup = document.getElementById("popup");
+    const popupMsg = document.getElementById("popup-msg");
+
     if (acertos === total) {
-        feedback.textContent = "✔️ Tudo certo! Mandou bem!";
-        feedback.style.color = "green";
+        popupMsg.textContent = "✔️ Parabéns! Mandou muito bem!";
     } else {
-        feedback.textContent = `Você acertou ${acertos}/${total}. Continue!`;
-        feedback.style.color = "red";
+        popupMsg.textContent = `Você acertou ${acertos}/${total}. Tente novamente`;
     }
+
+    popup.classList.remove("hidden");
+
+    // fechar pop-up
+    document.getElementById("close-popup").onclick = () => {
+        popup.classList.add("hidden");
+    };
+
 });
